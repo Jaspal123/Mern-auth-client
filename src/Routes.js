@@ -4,6 +4,7 @@ import App from './App';
 import Signup from './auth/Signup';
 import Signin from './auth/Signin';
 import Forgot from './auth/Forgot';
+import Reset from './auth/Reset';
 import Activate from './auth/Activate';
 import Private from './core/Private';
 import Admin from './core/Admin';
@@ -18,6 +19,7 @@ const Routes = () => {
                 <Route exact path="/signin" component={Signin} />
                 <Route exact path="/auth/activate/:token" component={Activate} />
                 <Route exact path="/auth/password/forgot" component={Forgot} />
+                 <Route exact path="/auth/password/reset/:token" component={Reset} />
                 <PrivateRoute exact path="/private" component={Private}/>
                 <AdminRoute exact path = "/admin" component={Admin} />
             </Switch>
